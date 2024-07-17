@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Project</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Images/favicon.webp">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="#">Coding</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" aria-current="page" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" href="    ">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active text-white" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Features
+                        </a>
+                        <ul class="dropdown-menu"> 
+                            <li><a class="dropdown-item " href="#">Tech</a></li>
+                            <li><a class="dropdown-item " href="#">Non-Tech</a></li>
+                            <li><a class="dropdown-item " href="#">Business</a></li>
+                            <li><a class="dropdown-item " href="#">Schools</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" aria-disabled="true" href="contact.html">Contact </a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+                <div class="mx-2">
+                    <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+                    <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#signupModal">Signup</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!--Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Login to Coding Blog </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="container my-2 d-flex flex-column justify-content-center align-items-center">
+                        <div class="col-12">
+                            <label for="inputAddress" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="exampleinputEmail1"
+                                placeholder="Enter Your Email ">
+                            <small id="emailHelp" class="form-text text-muted"> We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                        <div class="col-12">
+                            <br>
+                            <label for="inputAddress2" class="form-label">Password</label>
+                            <input type="text" class="form-control" id="inputAddress2"
+                                placeholder="Enter Your Password ">
+                            <small id="emailHelp" class="form-text text-muted"> We'll never share your password with
+                                anyone
+                                else.</small>
+                        </div>
+                        <br>
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="gridCheck">
+                                <label class="form-check-label" for="gridCheck">
+                                    Check me out
+                                </label>
+                            </div>
+                            <br>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary">Login</button>
+                        </div>
+                        </form>
+                    </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Sign Up Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="sighnupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Create an Coding Blog Account</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+
+
+                    <div class="container my-2 d-flex flex-column justify-content-center align-items-center">
+                        <div class="col-12">
+                            <label for="inputAddress" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="exampleinputEmail1"
+                                placeholder="Enter Your Name ">
+                        </div>
+                        <div class="col-12">
+                            <br>
+                            <label for="inputAddress" class="form-label">Phone Number</label>
+                            <input type="number" class="form-control" id="exampleinputEmail1"
+                                placeholder="Enter Your Mobile Number ">
+                        </div>
+                        <div class="col-12">
+                            <br>
+                            <label for="inputAddress" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="exampleinputEmail1"
+                                placeholder="Enter Your Email ">
+
+                        </div>
+                        <div class="col-12">
+                            <br>
+                            <label for="inputAddress2" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="inputAddress2"
+                                placeholder="Enter Your Password ">
+
+                        </div>
+                        <div class="col-12">
+                            <br>
+                            <label for="cinputAddress2" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="inputAddress2"
+                                placeholder="Enter Your Confirm Password ">
+                        </div>
+                        <br>
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="gridCheck">
+                                <label class="form-check-label" for="gridCheck">
+                                    Check me out
+                                </label>
+                            </div>
+                            <br>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary">Create Account</button>
+                        </div>
+                        </form>
+                    </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-4">
+        <div class="row featurette d-flex justify-content-center align-items-center">
+            <div class="col-md-7">
+                <h2 class="featurette-heading fw-normal lh-1">It all started with Coding Blog's Idea. <span
+                        class="text-body-secondary">It will blow your mind.</span></h2>
+                <p class="lead">
+                    <br>
+                    Welcome to our Coding Blog! Here, we learn about coding, which is like telling a computer what to
+                    do. We have fun lessons, simple projects, and cool ideas to help you start your coding journey.
+                    Whether you want to make a game or a website, our blog is here to help you learn and have fun with
+                    coding!
+                </p>
+            </div>
+            <div class="col-md-5">
+                <img class="img-fluid" src="Images/img11.avif" alt="">
+            </div>
+        </div>
+        <br>
+        <div class="row featurette d-flex justify-content-center align-items-center">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading fw-normal lh-1">We started Coding Blog in 2024. <span
+                        class="text-body-secondary">It will blow your mind.</span></h2>
+                <br>
+                <p class="lead">We’re excited to launch our new coding blog, where we’ll dive into the latest in web
+                    development, share tutorials, and explore new technologies. Whether you’re a beginner or a seasoned
+                    pro, we aim to provide valuable insights and hands-on tips to help you grow your skills and stay
+                    updated in the ever-evolving world of coding. Join us on this journey as we build, learn, and
+                    innovate together!</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+                <img class="img-fluid" src="Images/img10.avif" alt="">
+            </div>
+        </div>
+        <br>
+        <div class="row featurette d-flex justify-content-center align-items-center">
+            <div class="col-md-7">
+                <h2 class="featurette-heading fw-normal lh-1">Purpose of Coding Blog <span
+                        class="text-body-secondary">More About
+                        our Blogging </span></h2>
+                <br>
+                <p class="lead">
+                    Our goal is to create a supportive community where developers of all levels can learn, share, and
+                    grow together. We provide clear tutorials and guides on various programming languages and
+                    frameworks, share innovative project ideas, and keep you informed about the latest trends and best
+                    practices in the tech industry. Join us as we explore the fascinating world of coding, tackle new
+                    challenges, and build a brighter future through technology.
+                </p>
+            </div>
+            <div class="col-md-5">
+                <img class="img-fluid" src="Images/img12.avif" alt="">
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <footer class="container">
+        <p class="float-end"><a href="#">Back to top</a></p>
+        <p>© 2024–2031 Coding Blog India Pvt. Ltd. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+    </footer>
+    <br>
+    <br>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
